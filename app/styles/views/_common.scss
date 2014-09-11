@@ -1,0 +1,137 @@
+$base-color1: rgb(210, 40, 23); /*red*/
+$base-color2: rgb(133, 25, 13); /*dark red*/
+$base-color3: rgb(237, 237, 237); /*dark white*/ 
+
+@mixin dama-common {
+    .viewport{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .vbox{
+        @include box();
+        @include box-prop(orient, vertical);
+    }
+
+    .hbox{
+        @include box();
+        @include box-prop(orient, horizontal);
+    }
+
+    .boxflex1{
+        -webkit-box-flex: 1;
+    }
+
+    /*----- scroll css -----*/
+    .scroll-y, .scroll-x {
+        -webkit-overflow-scrolling: touch;
+    }
+    .scroll-y > *, .scroll-x > * {
+        -webkit-transform : translateZ(0);
+    }
+    .scroll-y { overflow-y: auto; }
+    .scroll-x { overflow-x: auto; }
+
+    .fullsize{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*----- content view -----*/
+    .contentview{
+        -webkit-box-flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /*----- menu bar -----*/
+    .menubar{
+        height: 44px;
+        width: 100%;
+
+        background-color: $base-color1;
+
+        @include box();
+    }
+
+    .menubar__btn{
+        width: 25%;
+        height: 100%;
+
+        a{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+
+            @include box();
+            @include box-prop(align, center);
+            @include box-prop(pack, center);
+        }
+
+        .active{
+            background-color: $base-color2;
+        }
+    }
+
+    /*----- tool bar -----*/
+    .toolbar{
+        height: 40px;
+        width: 100%;
+        position: relative;
+
+        background-color: $base-color1;
+    }
+
+    .toolbar__title{
+        color: white;
+        text-align: center;
+
+        font-size: 16px;
+        line-height: 40px;
+
+        width: 100%;
+
+        position: absolute;
+    }
+
+    .toolbar__button{
+        display: block;
+
+        outline: none;
+        border: none;
+        background: transparent;
+
+        color: white;
+        font-size: 12px;
+
+        height: 100%;
+    }
+
+    .toolbar__dropdown{
+        height: 100%;
+
+        .btn{
+            height: 100%;
+            font-size: 12px !important;
+            color: white !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .toolbar__button--left{
+        position: absolute;
+        left: 0;
+    }
+
+    .toolbar__button--right{
+        position: absolute;
+        right: 0;
+    }
+}

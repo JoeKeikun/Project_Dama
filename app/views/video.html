@@ -1,0 +1,19 @@
+<!-- toolbar -->
+<div class="toolbar">
+    <div class="toolbar__title">视屏</div>
+
+    <button class="toolbar__button toolbar__button--right" ng-click="videocache()">已缓存 ({{localNums}})</button>
+</div>
+
+<!-- content -->
+<div class="contentview">
+	<p>This is the video view.</p>
+</div>
+
+<!-- menu -->
+<div class="menubar">
+    <div class="menubar__btn"><a ng-href="#/results" class="{{activetab.results}}">效果</a></div>
+    <div class="menubar__btn"><a ng-href="#/range" class="{{activetab.range}}">排名</a></div>
+    <div class="menubar__btn"><a ng-href="#/video" class="{{activetab.video}}">视屏</a></div>
+    <div class="menubar__btn"><a ng-href="#/chat" class="{{activetab.chat}}">聊天</a></div>
+</div>

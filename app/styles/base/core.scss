@@ -1,0 +1,22 @@
+@mixin box() {
+	display: box;
+	display: -webkit-box;
+}
+
+@mixin box-prop($key, $value) {
+	-webkit-box-#{$key}: $value;
+	box-#{$key}: $value;
+}
+
+body {
+    background-color: white;
+    font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+
+    padding: 0;
+
+    -webkit-user-select: none;
+}
+
+input, select, textarea {
+    -webkit-user-select: auto;
+}

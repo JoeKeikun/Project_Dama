@@ -1,0 +1,29 @@
+@mixin dama-range {
+    .typebar{
+        height: 34px;
+        width: 100%;
+
+        background-color: $base-color1;
+    }
+
+    .typebar__btn{
+        width: 25%;
+        height: 100%;
+
+        overflow: hidden;
+        color: white;
+        font-size: 12px;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        display: block;
+    }
+
+    .typebar__btn.active{
+        background-color: $base-color2;
+    }
+
+/*------------range item section------------*/    
+}

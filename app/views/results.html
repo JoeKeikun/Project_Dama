@@ -1,0 +1,50 @@
+<!-- content -->
+<div class="contentview">
+    <div class="fullsize scroll-y">
+    	<div class="topsection">
+            <div class="topsection__date">{{today}}</div>
+        </div>
+
+        <div>
+            <table class="tablesection">
+                <tr ng-repeat="exer in exercises">
+                    <td class="tablesection__title">
+                        {{exer.title}}
+                    </td>
+                    <td class="tablesection__progress">
+                        <div class="progress__value">
+                            {{exer.evaluation}}
+                        </div>
+                        <div class="progress {{exer.progresstype}}" style="">
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: {{exer.percent}}%;"></div>
+                        </div>
+                    </td>
+                    <td class="tablesection__instruction">
+                        {{exer.value}}{{exer.unit}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="experiencesection"></div>
+
+        <div class="sharesection">
+            <div class="sharesection__shadow"></div>
+
+            <div class="sharesection__title">将今天的成果告诉好朋友:</div>
+
+            <div class="sharesection__btns">
+                <button class="sharesection__sharebtn" ng-click="sharetoweixin()">分享到微信朋友圈</button>
+                <button class="sharesection__sharebtn" ng-click="sharetoqzone()">分享到QQ空间</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- menu -->
+<div class="menubar">
+    <div class="menubar__btn"><a ng-href="#/results" class="{{activetab.results}}">效果</a></div>
+    <div class="menubar__btn"><a ng-href="#/range" class="{{activetab.range}}">排名</a></div>
+    <div class="menubar__btn"><a ng-href="#/video" class="{{activetab.video}}">视屏</a></div>
+    <div class="menubar__btn"><a ng-href="#/chat" class="{{activetab.chat}}">聊天</a></div>
+</div>

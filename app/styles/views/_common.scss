@@ -23,7 +23,7 @@ $base-color3: rgb(237, 237, 237); /*dark white*/
         -webkit-box-flex: 1;
     }
 
-    /*----- scroll css -----*/
+/*------------scroll css------------*/
     .scroll-y, .scroll-x {
         -webkit-overflow-scrolling: touch;
     }
@@ -39,14 +39,14 @@ $base-color3: rgb(237, 237, 237); /*dark white*/
         height: 100%;
     }
 
-    /*----- content view -----*/
+/*------------content view------------*/
     .contentview{
         -webkit-box-flex: 1;
         position: relative;
         overflow: hidden;
     }
 
-    /*----- menu bar -----*/
+/*------------menu bar------------*/
     .menubar{
         height: 44px;
         width: 100%;
@@ -78,7 +78,7 @@ $base-color3: rgb(237, 237, 237); /*dark white*/
         }
     }
 
-    /*----- tool bar -----*/
+/*------------tool bar------------*/
     .toolbar{
         height: 40px;
         width: 100%;
@@ -133,5 +133,28 @@ $base-color3: rgb(237, 237, 237); /*dark white*/
     .toolbar__button--right{
         position: absolute;
         right: 0;
+    }
+
+/*------------video play btn------------*/
+    .videoplay{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(210, 40, 23, 0.6);
+    }
+
+    .videoplay:before{
+        border: 0 solid transparent;
+        border-left-color: white;
+        border-top-width: 15.98px;
+        border-bottom-width: 15.98px;
+        border-left-width: 25px;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        content: '';
     }
 }

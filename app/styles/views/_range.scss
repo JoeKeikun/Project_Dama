@@ -25,5 +25,48 @@
         background-color: $base-color2;
     }
 
-/*------------range item section------------*/    
+/*------------range item section------------*/
+    .rangeitem{
+        height: 81px;
+        border-top: 1px solid white;
+    }
+
+    .itemno{
+        width: 80px;
+        height: 100%;
+
+        background: rgb(130, 121, 140);
+    }
+    .rangeitem:nth-child(1) .itemno{
+        background: rgb(255, 102, 0);
+    }
+    .rangeitem:nth-child(2) .itemno{
+        background: rgb(254, 153, 0);
+    }
+    .rangeitem:nth-child(3) .itemno{
+        background: rgb(255, 204, 0);
+    }
+
+    .itemimg{
+        width: 80px;
+        height: 100%;
+
+        background-size: 100% 100%;
+    }
+
+    .iteminfo{
+        -webkit-box-flex: 1;
+    }
+
+    .itemdetail{
+        width: 30px;
+        font-size: 20px;
+
+        color: rgb(220, 220, 220);
+
+        @include box();
+        @include box-prop(align, center);
+        @include box-prop(pack, center);
+    }
+
 }

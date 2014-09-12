@@ -9,7 +9,7 @@
  */
 angular.module('damaApp').controller('RangeCtrl', function($scope) {
     /**---------- 测试数据 ------------**/
-    var testData1 = $scope.rangelist = [{
+    var testData1 = [{
         no: 1,
         img: 'http://chat.xuxu.in/assets/img/mr-laoluo@2x.png',
         name: 'laoluo',
@@ -60,7 +60,7 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
         disUnit: '米'
     }];
 
-    var testData2 = $scope.rangelist = [{
+    var testData2 = [{
         no: 1,
         img: 'http://chat.xuxu.in/assets/img/majiajia@2x.png',
         name: 'majiajia',
@@ -68,8 +68,9 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
         dis: 100,
         disUnit: '米'
     }];
-    /**---------- 测试数据 ------------**/
 
+
+    /**---------- 交互数据 ------------**/
     $scope.activetab = {
         range: 'active',
     };
@@ -83,6 +84,25 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
     $scope.rangelist = testData1;
 
     //-----------处理函数------------
+    // 跳转处理
+    $scope.jumpToPage = function(type) {
+        switch (type) {
+            case 'range':
+                location.hash = '#/range';
+                break;
+            case 'video':
+                location.hash = '#/video';
+                break;
+            case 'chat':
+                location.hash = '#/chat';
+                break;
+            default:
+                location.hash = '#/results';
+                break;
+        }
+    };
+
+    // 下拉按钮
     $scope.rangeDistance100 = function() {
         $scope.rangeDistance = '100米内';
     };
@@ -96,6 +116,7 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
         $scope.rangeDistance = '10公里内';
     };
 
+    // 类别切换
     $scope.rangeDayType = function() {
         $scope.rangetype = {
             day: 'active'
@@ -125,6 +146,7 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
         $scope.rangelist = testData2;
     };
 
+    // 分享到微信
     $scope.sharetoweixin = function() {
         alert('sharetoweixin');
     };

@@ -13,4 +13,23 @@ angular.module('damaApp').controller('VideoCtrl', function($scope) {
     };
 
     $scope.localNums = 14;
+
+    //-----------处理函数------------
+    // 跳转处理
+    $scope.jumpToPage = function(type) {
+        switch (type) {
+            case 'range':
+                location.hash = '#/range';
+                break;
+            case 'video':
+                location.hash = '#/video';
+                break;
+            case 'chat':
+                location.hash = '#/chat';
+                break;
+            default:
+                location.hash = '#/results';
+                break;
+        }
+    };
 });

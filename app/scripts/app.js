@@ -14,7 +14,7 @@ angular.module('damaApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'angular-gestures'
 ]).config(function($routeProvider) {
     $routeProvider
         .when('/', {

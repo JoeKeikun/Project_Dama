@@ -34,8 +34,8 @@
             <div class="sharesection__title">将今天的成果告诉好朋友:</div>
 
             <div class="sharesection__btns">
-                <button class="sharesection__sharebtn" ng-click="sharetoweixin()">分享到微信朋友圈</button>
-                <button class="sharesection__sharebtn" ng-click="sharetoqzone()">分享到QQ空间</button>
+                <div class="button sharesection__sharebtn" hm-tap="sharetoweixin()">分享到微信朋友圈</div>
+                <div class="button sharesection__sharebtn" hm-tap="sharetoqzone()">分享到QQ空间</div>
             </div>
         </div>
     </div>
@@ -43,8 +43,8 @@
 
 <!-- menu -->
 <div class="menubar">
-    <div class="menubar__btn"><a ng-href="#/results" class="{{activetab.results}}">效果</a></div>
-    <div class="menubar__btn"><a ng-href="#/range" class="{{activetab.range}}">排名</a></div>
-    <div class="menubar__btn"><a ng-href="#/video" class="{{activetab.video}}">视屏</a></div>
-    <div class="menubar__btn"><a ng-href="#/chat" class="{{activetab.chat}}">聊天</a></div>
+    <div class="menubar__btn {{activetab.results}}" hm-tap="jumpToPage('results')">效果</div>
+    <div class="menubar__btn {{activetab.range}}" hm-tap="jumpToPage('range')">排名</div>
+    <div class="menubar__btn {{activetab.video}}" hm-tap="jumpToPage('video')">视屏</div>
+    <div class="menubar__btn {{activetab.chat}}" hm-tap="jumpToPage('chat')">聊天</div>
 </div>

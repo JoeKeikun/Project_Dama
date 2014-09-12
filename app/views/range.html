@@ -3,27 +3,27 @@
     <div class="toolbar__title">排名</div>
     
     <div class="btn-group toolbar__dropdown toolbar__button--left">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        {{rangeDistance}} <span class="caret"></span>
-        </button>
+        <div type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            {{rangeDistance}} <span class="caret"></span>
+        </div>
         <ul class="dropdown-menu" role="menu">
-            <li><a href="javascript:void(0);" ng-click="rangeDistance100()">100米内</a></li>
-            <li><a href="javascript:void(0);" ng-click="rangeDistance500()">500米内</a></li>
-            <li><a href="javascript:void(0);" ng-click="rangeDistance1000()">1公里内</a></li>
-            <li><a href="javascript:void(0);" ng-click="rangeDistance10000()">10公里内</a></li>
+            <li><a href="javascript:void(0);" hm-tap="rangeDistance100()">100米内</a></li>
+            <li><a href="javascript:void(0);" hm-tap="rangeDistance500()">500米内</a></li>
+            <li><a href="javascript:void(0);" hm-tap="rangeDistance1000()">1公里内</a></li>
+            <li><a href="javascript:void(0);" hm-tap="rangeDistance10000()">10公里内</a></li>
         </ul>
     </div>
 
-    <button class="toolbar__button toolbar__button--right" ng-click="sharetoweixin()">分享到微信</button>
+    <div class="toolbar__button toolbar__button--right" hm-tap="sharetoweixin()">分享到微信</div>
 </div>
 
 <!-- content -->
 <div class="contentview vbox">
     <div class="typebar hbox">
-        <button class="typebar__btn {{rangetype.day}}" ng-click="rangeDayType()">当天</a></button>
-        <button class="typebar__btn {{rangetype.month}}" ng-click="rangeMonthType()">月度</a></button>
-        <button class="typebar__btn {{rangetype.season}}" ng-click="rangeSeasonType()">季度</a></button>
-        <button class="typebar__btn {{rangetype.year}}" ng-click="rangeYearType()">年度</a></button>
+        <button class="typebar__btn {{rangetype.day}}" hm-tap="rangeDayType()">当天</a></button>
+        <button class="typebar__btn {{rangetype.month}}" hm-tap="rangeMonthType()">月度</a></button>
+        <button class="typebar__btn {{rangetype.season}}" hm-tap="rangeSeasonType()">季度</a></button>
+        <button class="typebar__btn {{rangetype.year}}" hm-tap="rangeYearType()">年度</a></button>
     </div>
 
     <div class="boxflex1" style="position: relative;">
@@ -52,8 +52,8 @@
 
 <!-- menu -->
 <div class="menubar">
-    <div class="menubar__btn"><a ng-href="#/results" class="{{activetab.results}}">效果</a></div>
-    <div class="menubar__btn"><a ng-href="#/range" class="{{activetab.range}}">排名</a></div>
-    <div class="menubar__btn"><a ng-href="#/video" class="{{activetab.video}}">视屏</a></div>
-    <div class="menubar__btn"><a ng-href="#/chat" class="{{activetab.chat}}">聊天</a></div>
+    <div class="menubar__btn {{activetab.results}}" hm-tap="jumpToPage('results')">效果</div>
+    <div class="menubar__btn {{activetab.range}}" hm-tap="jumpToPage('range')">排名</div>
+    <div class="menubar__btn {{activetab.video}}" hm-tap="jumpToPage('video')">视屏</div>
+    <div class="menubar__btn {{activetab.chat}}" hm-tap="jumpToPage('chat')">聊天</div>
 </div>

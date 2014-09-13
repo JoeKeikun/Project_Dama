@@ -9,7 +9,20 @@
 
 <!-- content -->
 <div class="contentview">
-	<p>This is the video view.</p>
+	<div class="fullsize scroll-y">
+        <div class="videoitem hbox" ng-repeat="item in videolist">
+            <div class="videoitem__img" style="background-image: url({{item.img}});">
+            	<div class="videoplay"></div>
+			</div>
+
+            <div class="videoitem__info">
+                <div class="videoitem__name"> {{item.name}}</div>
+                <div class="videoitem__time"> 时长: {{item.time}} {{item.timeunit}}</div><br>
+
+                <div class="button videoitem__cache"> 缓存到本地 </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- menu -->

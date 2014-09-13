@@ -1,5 +1,126 @@
 @mixin dama-video {
 
-/*------------range item section------------*/
+/*------------video play btn------------*/
+    .videoplay{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(210, 40, 23, 0.6);
+    }
+
+    .videoplay:before{
+        border: 0 solid transparent;
+        border-left-color: white;
+        border-top-width: 15.98px;
+        border-bottom-width: 15.98px;
+        border-left-width: 25px;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        content: '';
+    }
+
+/*------------video item section------------*/
+    .videoitem{
+        height: 99px;
+        border-bottom: 2px solid white;
+    }
+
+    .videoitem__img{
+        width: 160px;
+        height: 100%;
+
+        background-size: 100% 100%;
+        position: relative;
+
+        .videoplay{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -40px;
+            -webkit-transform: scale(0.5);
+        }
+    }
+
+    .videoitem__info{
+        -webkit-box-flex: 1;
+
+        padding: 5px 10px;
+    }
+
+    .videoitem__name{
+        font-size: 12px;
+        color: black;
+
+        @include box();
+        @include box-prop(orient, vertical);
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .videoitem__time{
+        font-size: 12px;
+        color: rgb(153, 153, 153);
+    }
+
+    .videoitem__cache{
+        border-radius: 4px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    /*------------special video------------*/
+    .videoitem:first-child{
+        height: 205px;
+        position: relative;
+
+        .videoitem__img{
+            width: 100%;
+            position: absolute;
+
+            .videoplay{
+                -webkit-transform: scale(0.9);
+            }
+        }
+
+        .videoitem__info{
+            position: absolute;
+            bottom: 0;
+
+            height: 35px;
+            width: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+            @include box();
+            @include box-prop(align, center);
+        }
+
+        .videoitem__name{
+            font-size: 12px;
+            color: white;
+
+            -webkit-box-flex: 1;
+
+            @include box();
+            @include box-prop(orient, vertical);
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+
+        .videoitem__time{
+            font-size: 12px;
+            color: white;
+
+            width: 100px;
+        }
+
+        .videoitem__cache{
+            display: none;
+        }
+    }
 
 }

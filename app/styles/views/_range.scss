@@ -36,6 +36,10 @@
         height: 100%;
 
         background: rgb(130, 121, 140);
+
+        @include box();
+        @include box-prop(align, center);
+        @include box-prop(pack, center);
     }
     .rangeitem:nth-child(1) .rangeitem__no{
         background: rgb(255, 102, 0);

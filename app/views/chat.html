@@ -5,7 +5,28 @@
 
 <!-- content -->
 <div class="contentview">
-	<p>This is the chat view.</p>
+	<div class="fullsize scroll-y">
+        <div class="chatitem hbox" ng-repeat="item in chatlist">
+            <div class="chatitem__img" ng-if="item.type == 0" style="background-image: url({{item.img[0]}});">
+			</div>
+			<div class="chatitem__imggrp" ng-if="item.type == 1">
+				<div class="chatitem__imggrp__img" ng-if="item.img[0]" style="background-image: url({{item.img[0]}});"></div>
+				<div class="chatitem__imggrp__img" ng-if="item.img[1]" style="background-image: url({{item.img[1]}});"></div>
+				<div class="chatitem__imggrp__img" ng-if="item.img[2]" style="background-image: url({{item.img[2]}});"></div>
+				<div class="chatitem__imggrp__img" ng-if="item.img[3]" style="background-image: url({{item.img[3]}});"></div>
+			</div>
+
+            <div class="chatitem__info">
+                <div class="chatitem__name"> {{item.name}} </div>
+                <div class="chatitem__content"> <span ng-if="item.type == 1">{{item.lastSpeak.name}}:</span> {{item.lastSpeak.content}} </div>
+                <div class="chatitem__time"> {{item.lastSpeak.time}}</div>
+            </div>
+
+            <div class="chatitem__detail">
+                >
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- menu -->

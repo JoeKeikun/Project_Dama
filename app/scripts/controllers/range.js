@@ -148,6 +148,6 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
 
     // 分享到微信
     $scope.sharetoweixin = function() {
-        alert('sharetoweixin');
+        window.alert('sharetoweixin');
     };
 });

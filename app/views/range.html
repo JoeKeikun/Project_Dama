@@ -29,20 +29,20 @@
     <div class="boxflex1" style="position: relative;">
         <div class="fullsize scroll-y">
             <div class="rangeitem hbox" ng-repeat="item in rangelist">
-                <div class="itemno">
+                <div class="rangeitem__no">
                     {{item.no}}
                 </div>
 
-                <div class="itemimg" style="background-image: url({{item.img}});">
+                <div class="rangeitem__img" style="background-image: url({{item.img}});">
                 </div>
                 
-                <div class="iteminfo">
-                    <div class="itemname"> {{item.name}} </div>
-                    <div class="itemscore"> 得分： {{item.score}} </div>
-                    <div class="itemdis"> 离你{{item.dis}}{{item.disUnit}} </div>
+                <div class="rangeitem__info">
+                    <div class="rangeitem__name"> {{item.name}} </div>
+                    <div class="rangeitem__score"> 得分： {{item.score}} </div>
+                    <div class="rangeitem__dis"> 离你{{item.dis}}{{item.disUnit}} </div>
                 </div>
 
-                <div class="itemdetail">
+                <div class="rangeitem__detail">
                     >
                 </div>
             </div>

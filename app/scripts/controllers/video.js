@@ -8,6 +8,7 @@
  * Controller of the damaApp
  */
 angular.module('damaApp').controller('VideoCtrl', function($scope) {
+    /**---------- 交互数据 ------------**/
     $scope.activetab = {
         video: 'active'
     };

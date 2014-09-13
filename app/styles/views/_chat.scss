@@ -1,0 +1,73 @@
+@mixin dama-chat {
+
+/*------------chat item section------------*/
+    .chatitem{
+        height: 81px;
+        margin-bottom: 15px;
+        padding: 0 7px;
+    }
+    .chatitem:first-child{
+        margin-top: 5px;
+    }
+
+    .chatitem__img{
+        width: 80px;
+        height: 100%;
+
+        background-size: 100% 100%;
+    }
+
+    .chatitem__imggrp{
+        width: 80px;
+        height: 100%;
+
+        border: 1px solid $base-color1;
+        padding: 7px;
+    }
+
+    .chatitem__imggrp__img{
+        width: 30px;
+        height: 30px;
+        background-size: 100% 100%;
+
+        display: inline-block;
+    }
+
+    .chatitem__info{
+        -webkit-box-flex: 1;
+
+        padding-left: 10px;
+    }
+
+    .chatitem__detail{
+        width: 30px;
+        font-size: 20px;
+
+        color: rgb(220, 220, 220);
+
+        @include box();
+        @include box-prop(align, center);
+        @include box-prop(pack, center);
+    }
+
+    .chatitem__name{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .chatitem__content{
+        font-size: 12px;
+        color: rgb(62, 62, 62);
+
+        @include box();
+        @include box-prop(orient, vertical);
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .chatitem__time{
+        font-size: 10px;
+        color: rgb(143, 143, 143);
+    }
+
+}

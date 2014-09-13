@@ -8,6 +8,7 @@
  * Controller of the damaApp
  */
 angular.module('damaApp').controller('ResultsCtrl', function($scope) {
+    /**---------- 交互数据 ------------**/
     $scope.activetab = {
         results: 'active'
     };
@@ -65,11 +66,13 @@ angular.module('damaApp').controller('ResultsCtrl', function($scope) {
     };
 
     $scope.sharetoweixin = function() {
-        alert('sharetoweixin');
+        window.alert('sharetoweixin');
+        $scope.exercises[3].percent = 10;
+        $scope.exercises[3].value = 10;
     };
 
     $scope.sharetoqzone = function() {
-        alert('sharetoqzone');
+        window.alert('sharetoqzone');
         $scope.exercises[3].percent = 80;
         $scope.exercises[3].value = 31;
     };

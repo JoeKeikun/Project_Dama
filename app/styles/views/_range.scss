@@ -31,36 +31,36 @@
         border-top: 1px solid white;
     }
 
-    .itemno{
+    .rangeitem__no{
         width: 80px;
         height: 100%;
 
         background: rgb(130, 121, 140);
     }
-    .rangeitem:nth-child(1) .itemno{
+    .rangeitem:nth-child(1) .rangeitem__no{
         background: rgb(255, 102, 0);
     }
-    .rangeitem:nth-child(2) .itemno{
+    .rangeitem:nth-child(2) .rangeitem__no{
         background: rgb(254, 153, 0);
     }
-    .rangeitem:nth-child(3) .itemno{
+    .rangeitem:nth-child(3) .rangeitem__no{
         background: rgb(255, 204, 0);
     }
 
-    .itemimg{
+    .rangeitem__img{
         width: 80px;
         height: 100%;
 
         background-size: 100% 100%;
     }
 
-    .iteminfo{
+    .rangeitem__info{
         -webkit-box-flex: 1;
 
         padding-left: 10px;
     }
 
-    .itemdetail{
+    .rangeitem__detail{
         width: 30px;
         font-size: 20px;
 

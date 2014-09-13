@@ -12,11 +12,7 @@ angular.module('damaApp').controller('ChatCtrl', function($scope) {
     var testData1 = [{
         chatId: 0,
         type: 1, // 种别，0：个人，1：小组
-        img: ['http://chat.xuxu.in/assets/img/mr-laoluo@2x.png',
-            'http://chat.xuxu.in/assets/img/majiajia@2x.png',
-            'http://chat.xuxu.in/assets/img/mr-laoluo@2x.png',
-            'http://chat.xuxu.in/assets/img/majiajia@2x.png'
-        ], // 数组，最多存放四个
+        img: ['http://chat.xuxu.in/assets/img/mr-laoluo@2x.png', 'http://chat.xuxu.in/assets/img/majiajia@2x.png', 'http://chat.xuxu.in/assets/img/williwu@2x.png', 'http://chat.xuxu.in/assets/img/majiajia@2x.png'], // 数组，最多存放四个
         name: '群聊', // 名称
         number: 36, // 个数
         lastSpeak: {
@@ -60,7 +56,7 @@ angular.module('damaApp').controller('ChatCtrl', function($scope) {
     }, {
         chatId: 4,
         type: 0, // 种别，0：个人，1：小组
-        img: ['http://chat.xuxu.in/assets/img/mr-laoluo@2x.png'], // 数组，最多存放四个
+        img: ['http://chat.xuxu.in/assets/img/williwu@2x.png'], // 数组，最多存放四个
         name: '珍尼', // 名称
         number: 2, // 个数
         lastSpeak: {
@@ -82,7 +78,7 @@ angular.module('damaApp').controller('ChatCtrl', function($scope) {
     }, {
         chatId: 6,
         type: 0, // 种别，0：个人，1：小组
-        img: ['http://chat.xuxu.in/assets/img/mr-laoluo@2x.png'], // 数组，最多存放四个
+        img: ['http://chat.xuxu.in/assets/img/williwu@2x.png'], // 数组，最多存放四个
         name: '珍尼', // 名称
         number: 2, // 个数
         lastSpeak: {

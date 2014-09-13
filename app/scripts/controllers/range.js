@@ -25,35 +25,35 @@ angular.module('damaApp').controller('RangeCtrl', function($scope) {
         disUnit: '米'
     }, {
         no: 3,
-        img: '',
+        img: 'http://chat.xuxu.in/assets/img/williwu@2x.png',
         name: 'aa',
         score: 86,
         dis: 100,
         disUnit: '米'
     }, {
         no: 4,
-        img: '',
+        img: 'http://chat.xuxu.in/assets/img/williwu@2x.png',
         name: 'aa',
         score: 86,
         dis: 100,
         disUnit: '米'
     }, {
         no: 5,
-        img: '',
+        img: 'http://chat.xuxu.in/assets/img/williwu@2x.png',
         name: 'aa',
         score: 86,
         dis: 100,
         disUnit: '米'
     }, {
         no: 6,
-        img: '',
+        img: 'http://chat.xuxu.in/assets/img/williwu@2x.png',
         name: 'aa',
         score: 86,
         dis: 100,
         disUnit: '米'
     }, {
         no: 7,
-        img: '',
+        img: 'http://chat.xuxu.in/assets/img/williwu@2x.png',
         name: 'aa',
         score: 86,
         dis: 100,

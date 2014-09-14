@@ -95,6 +95,8 @@
 
             background-color: rgba(0, 0, 0, 0.5);
 
+            pointer-events: none;
+
             @include box();
             @include box-prop(align, center);
         }

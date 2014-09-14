@@ -32,6 +32,42 @@ $progress-color4: rgb(102, 0, 102);
         line-height: 40px;
     }
 
+    /*------------round progress------------*/
+    .roundprogress{
+        display: inline-block;
+        position: relative;
+    }
+
+    .scoreround{
+        margin: 15px 20px;
+    }
+
+    .round__content{
+        position: absolute;
+        color: #fff;
+        top: 50%;
+        text-align: center;
+        margin: -17px 0;
+        padding: 0 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .round__state{
+        position: absolute;
+        left: 200px;
+        color: white;
+        width: 90px;
+    }
+
+    .round__state__line {
+        position: absolute;
+        left: -55px;
+        top: 10px;
+    }
+
 /*------------table section------------*/
     .tablesection{
         width: 100%;

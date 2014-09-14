@@ -1,8 +1,38 @@
 <!-- content -->
 <div class="contentview">
     <div class="fullsize scroll-y">
-    	<div class="topsection">
+        <div class="topsection">
             <div class="topsection__date">{{today}}</div>
+
+            <div class="roundprogress scoreround" ng-style="{'font-size': ((radius + stroke)/(isSemi ? 3.5 : 3))+'px'}">
+                <div class="round__content">综合得分<br>{{scorevalue}}分</div>
+                <div class="round__state">
+                    <svg width="51px" height="21px" version="1.1" xmlns="http://www.w3.org/2000/svg" class="round__state__line">
+                        <polyline points="0,20 20,0 50,0" style="fill: transparent;stroke: white;stroke-width: 1;"></polyline>
+                    </svg>
+                    今天击败了全国{{scorewinner}}%的舞者
+                </div>
+                <div round-progress 
+                    max="scoremax" 
+                    current="scorecur" 
+                    color="white" 
+                    bgcolor="rgb(239, 180, 172)" 
+                    radius="80" 
+                    stroke="7">
+                </div>
+            </div>
+
+            <div class="roundprogress expround" ng-style="{'font-size': ((radius + stroke)/(isSemi ? 3.5 : 3))+'px'}">
+                <div class="round__content">获得经验<br>{{expvalue}}</div>
+                <div round-progress 
+                    max="expmax" 
+                    current="expcur" 
+                    color="white" 
+                    bgcolor="rgb(239, 180, 172)" 
+                    radius="40" 
+                    stroke="3">
+                </div>
+            </div>
         </div>
 
         <div>

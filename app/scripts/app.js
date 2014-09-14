@@ -14,7 +14,8 @@ angular.module('damaApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'angular-gestures'
+    'angular-gestures',
+    'angular-svg-round-progress'
 ]).config(function($routeProvider) {
     $routeProvider
         .when('/', {
